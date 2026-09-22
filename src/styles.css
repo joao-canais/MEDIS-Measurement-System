@@ -1,0 +1,49 @@
+/* Module with most of the CSS styles for the Streamlit app */
+
+/* Global Streamlit layout */
+.block-container {
+    padding-top: 3.5rem !important;
+    padding-bottom: 2rem !important;
+}
+
+.stAppDeployButton {
+    display: none !important;
+}
+
+/* Custom text size for Capture Image buttons */
+.st-key-start_acquisition button p,
+.st-key-clear_files button p,
+.st-key-clear_files_2 button p,
+.st-key-capture_image button p {
+    font-size: 1.1rem !important;
+}
+
+.st-key-start_acquisition button,
+.st-key-clear_files button,
+.st-key-clear_files_2 button,
+.st-key-capture_image button {
+    height: 4.2rem !important;
+    min-height: 3rem !important;
+}
+
+/* GitHub link in the sidebar */
+.github-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none !important;
+    color: #b0b0b0 !important;
+    font-size: 0.88rem;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.github-link svg {
+    fill: currentColor !important;
+}
+
+.github-link:hover {
+    background-color: #333333 !important;
+    color: #ffffff !important;
+}

@@ -1,0 +1,76 @@
+# Environments
+venv/
+.venv/
+.env
+
+# Python cache
+/__pycache__/
+**/__pycache__/
+*.pyc
+*.pyo
+
+# IDE/editor
+.vscode/
+.idea/
+
+# OS-specific
+Thumbs.db
+
+# Jupyter Notebooks
+*.ipynb_checkpoints
+
+# Build, distribution, and packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+*.manifest
+*.spec
+
+# Logs
+*.log
+
+# Test and coverage
+htmlcov/
+.coverage
+.tox/
+.pytest_cache/
+.nox/
+.cache/
+coverage.xml
+*.cover
+*.pyc
+*.pyo
+*.pyd
+
+# Temporary files
+*.swp
+*.bak
+*.tmp
+*.orig
+*.swo
+
+# MacOS
+*.DS_Store
+
+# Github
+.github/
+
+# Status
+status.md
+
+# Others
+others/
+files/Teste/
+files/Main_Files/
+files/text_files/
+src/cam_linux/
+
+
+# For GitHub Repo - Calibration Files exclusions
+files/Calibration_Files/**
+!files/Calibration_Files/**/
+!files/Calibration_Files/coefficients/calibration_test/**
+!files/Calibration_Files/Data/calibration_data_test.txt
+!files/Calibration_Files/Fits/capture_fits_test/**
+!files/Calibration_Files/Images/Images_test/**
