@@ -1,0 +1,23 @@
+{
+    "coefficients": {
+        "alpha_x": [
+            0.03624919955888058,
+            0.004782479065236288,
+            -36.00609167030984
+        ],
+        "alpha_y": [
+            0.004403969591457762,
+            -0.03581078187810896,
+            37.71449177339301
+        ],
+        "resi_x": 0.001051921869296383,
+        "resi_y": 0.002311041748535292,
+        "model": "linear"
+    },
+    "validation": {
+        "accuracy_percentage": 100.0,
+        "mean_error_x_mm": 0.011,
+        "mean_error_y_mm": 0.016
+    },
+    "folder_name": "calibration_test"
+}

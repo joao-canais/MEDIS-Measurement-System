@@ -1,0 +1,47 @@
+name: Wake Up Streamlit App
+
+on:
+  schedule:
+    - cron: '0 8,14 * * *'
+  workflow_dispatch:
+
+jobs:
+  wake:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Playwright
+        run: |
+          pip install playwright
+          playwright install chromium --with-deps
+
+      - name: Visit and Wake App
+        run: |
+          python - << 'EOF'
+          import sys
+          from playwright.sync_api import sync_playwright
+
+          url = "https://medis-measurement-system.streamlit.app/"
+
+          with sync_playwright() as p:
+            browser = p.chromium.launch(headless=True)
+            page = browser.new_page()
+            print(f"A navegar para {url}...")
+            page.goto(url, wait_until="networkidle", timeout=60000)
+
+            wake_button = page.get_by_role("button", name="Yes, get this app back up")
+
+            if wake_button.is_visible():
+              print("A app estava a dormir! A clicar para acordar...")
+              wake_button.click()
+              page.wait_for_timeout(10000)
+              print("Pedido de arranque enviado com sucesso.")
+            else:
+              print("A app já se encontra ativa.")
+
+            browser.close()
+          EOF
